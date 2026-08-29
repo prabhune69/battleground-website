@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+.idea/
+
+# Cloudflare / Wrangler
+.wrangler/
+
+# Logs
+*.log

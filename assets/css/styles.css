@@ -420,9 +420,47 @@ footer h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
   .grid { grid-template-columns: repeat(3, 1fr); }
   #plans .grid { grid-template-columns: repeat(3, 1fr); }
   .hero { padding-block: 160px 110px; }
-  .hero-mark { background-position: center 32%; background-size: min(1180px, 78%) auto; }
   .logo { height: 62px; }
   .brand { font-size: 1.7rem; }
+  /* 1.3 is the logo's aspect ratio, so the third term caps the logo by
+     height — on a short window it shrinks instead of running into the copy. */
+  .hero-mark {
+    background-position: center 32%;
+    background-size: min(1180px, 78%, calc(76svh * 1.3)) auto;
+  }
+}
+
+/* Phones and tablets: give the logo its own grid row above the copy, so the
+   wordmark can never land on top of "Jogeshwari East, Mumbai". The row is
+   whatever height is left over, and background-size: contain fits the logo
+   into it — big where there is room, smaller on a short screen. */
+@media (max-width: 899px) {
+  .hero {
+    grid-template-rows: minmax(140px, 1fr) auto;
+    align-content: stretch;
+    row-gap: 18px;
+    padding-block: 88px 72px;
+  }
+  /* Lighter scrim over the top now that the logo sits up there on its own */
+  .hero-scrim {
+    background:
+      radial-gradient(130% 70% at 50% 26%, transparent 45%, rgba(13,13,15,.5) 100%),
+      linear-gradient(180deg,
+        rgba(13,13,15,.7) 0%,
+        rgba(13,13,15,.08) 22%,
+        rgba(13,13,15,.34) 50%,
+        rgba(13,13,15,.9) 78%,
+        var(--bg) 100%);
+  }
+  .hero-mark {
+    position: relative;
+    inset: auto;
+    grid-row: 1;
+    min-height: 0;
+    background-position: center center;
+    background-size: contain;
+  }
+  .hero-content { grid-row: 2; }
 }
 
 /* Keep header balanced on very small screens */
@@ -430,8 +468,8 @@ footer h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
   .logo { height: 40px; }
   .brand { font-size: 1.15rem; }
   .header-cta .btn { padding: 8px 12px; }
-  .hero { padding-block: 120px 84px; }
-  .hero-mark { background-size: 100% auto; background-position: center 24%; }
+  .hero { padding-block: 78px 68px; row-gap: 14px; }
+  .hero .tagline { margin-bottom: 22px; }
 }
 
 a:focus-visible, .btn:focus-visible {

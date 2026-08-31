@@ -4,44 +4,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>BattleGround Fitness Club — Gym in Jogeshwari East, Mumbai</title>
-  <meta name="description" content="BattleGround Fitness Club is a fully-equipped gym in Jogeshwari East, Mumbai. Strength, cardio and expert training. Join today — call [PHONE].">
+  <title>BattleGround Fitness Club — Opening Soon in Jogeshwari East, Mumbai</title>
+  <meta name="description" content="BattleGround Fitness Club is opening soon in Jogeshwari East, Mumbai. A fully-equipped gym for strength, cardio and expert training. Enquire now — call [PHONE].">
 
   <!-- Open Graph / WhatsApp link preview -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="BattleGround Fitness Club — Gym in Jogeshwari East, Mumbai">
-  <meta property="og:description" content="A fully-equipped gym in Jogeshwari East, Mumbai. Strength, cardio and expert training. Join today.">
+  <meta property="og:title" content="BattleGround Fitness Club — Opening Soon in Jogeshwari East, Mumbai">
+  <meta property="og:description" content="Opening soon in Jogeshwari East, Mumbai. A fully-equipped gym for strength, cardio and expert training.">
   <meta property="og:image" content="assets/images/logo.jpeg">
   <meta property="og:url" content="[SITE_URL]">
   <meta property="og:site_name" content="BattleGround Fitness Club">
-  <meta name="theme-color" content="#e63946">
+  <meta name="theme-color" content="#0d0d0f">
 
+  <link rel="icon" href="assets/images/logo-mark.jpg">
+  <link rel="apple-touch-icon" href="assets/images/logo-mark.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+  <link rel="preload" as="image" href="assets/images/logo.jpeg">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
   <!-- ===== Header ===== -->
-  <header>
+  <header id="site-header">
     <div class="wrap header-inner">
-      <img class="logo" src="assets/images/logo.jpeg" alt="BattleGround Fitness Club logo">
-      <div class="brand">Battle<span>Ground</span><br>Fitness Club</div>
+      <img class="logo" src="assets/images/logo-mark.jpg" width="404" height="334"
+           alt="BattleGround Fitness Club emblem">
+      <div class="brand">Battle<span>Ground</span></div>
       <div class="header-cta">
         <a class="btn small" href="tel:[PHONE]">Call to Join</a>
       </div>
     </div>
   </header>
 
-  <!-- ===== Hero ===== -->
+  <!-- ===== Hero (full-screen logo + name backdrop) ===== -->
   <section class="hero" id="home">
-    <div class="wrap">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-mark" role="img" aria-label="BattleGround Fitness Club — Stronger Everyday"></div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <div class="wrap hero-content">
       <span class="eyebrow">Jogeshwari East, Mumbai</span>
-      <h1>Welcome to BattleGround Fitness Club</h1>
-      <p class="tagline">Train hard. Get stronger. Your neighbourhood gym for strength, cardio and results.</p>
+      <!-- add data-loop="false" to type once and stop -->
+      <h1 class="typewriter" data-text="Opening Soon"
+          data-delay="450" data-type="105" data-hold="2800" data-erase="40" data-pause="700">Opening Soon</h1>
+      <p class="tagline reveal-words" data-delay="1900" data-step="70">Train hard. Get stronger. Your neighbourhood gym for strength, cardio and results.</p>
       <div class="hero-actions">
         <a class="btn" href="tel:[PHONE]">📞 Call Now — [PHONE]</a>
         <a class="btn ghost" href="#plans">View Membership Plans</a>
       </div>
     </div>
+
+    <a class="scroll-cue" href="#facilities" aria-label="Scroll to facilities">
+      <span>Explore</span>
+      <span class="arrow" aria-hidden="true">↓</span>
+    </a>
   </section>
 
   <!-- ===== Facilities ===== -->
@@ -136,7 +155,8 @@
     <div class="wrap footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/images/logo.jpeg" alt="BattleGround Fitness Club logo">
+          <img src="assets/images/logo-mark.jpg" width="404" height="334"
+               alt="BattleGround Fitness Club emblem">
           <strong>BattleGround Fitness Club</strong>
         </div>
         <p style="color:var(--muted); margin:0;">Your neighbourhood gym in Jogeshwari East, Mumbai. Come train with us.</p>
